@@ -1,0 +1,5 @@
+Hi from vim edited .txt file 
+main 1
+main 2
+sfgaggfs
+main 3
