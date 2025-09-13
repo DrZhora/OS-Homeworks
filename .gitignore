@@ -20,6 +20,13 @@
 *.exe
 *.out
 *.app
+Assignment[0-9]
+Assignment[0-9][0-9]
 
 # VS Code settings
 .vscode/
+
+# Binary files without extension
+*
+!/**/
+!*.*
