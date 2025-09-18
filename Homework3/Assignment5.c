@@ -19,6 +19,7 @@
  */
 
 void create_zombie() {
+    
     pid_t pid = fork();
     
     if (pid < 0) {
@@ -26,20 +27,18 @@ void create_zombie() {
         exit(1);
     }
     else if (pid == 0) {
-        // Child process
+
         printf("Child process (PID: %d) starting\n", getpid());
         printf("Child process will exit immediately\n");
         exit(0);
     }
     else {
-        // Parent process
+
         printf("Parent process (PID: %d) created child (PID: %d)\n", getpid(), pid);
         printf("Parent sleeping for 30 seconds - observe zombie state\n");
         printf("Run in another terminal:\n");
-        printf("ps aux | grep defunct\n");
-        
+        printf("ps aux | grep defunct\n");    
         sleep(30);  
-        
         printf("\nParent process exiting without waiting for child\n");
     }
 }
@@ -52,13 +51,13 @@ void prevent_zombie() {
         exit(1);
     }
     else if (pid == 0) {
-        // Child process
+
         printf("\nChild process (PID: %d) starting\n", getpid());
         printf("Child process will exit immediately\n");
         exit(0);
     }
     else {
-        // Parent process
+
         printf("\nParent process (PID: %d) created child (PID: %d)\n", getpid(), pid);
         printf("Parent will wait for child to prevent zombie\n");
         
