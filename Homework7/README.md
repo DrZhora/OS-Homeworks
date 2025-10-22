@@ -33,15 +33,3 @@ Enter the arrival time and burst time for process 4: 3 5
 
 The program will print the FCFS and SJF scheduling results including Gantt charts and average metrics.
 
-Notes
------
-
-- The SJF implementation in this program performs a global sort by burst time (then arrival time, then PID). This produces the sample SJF ordering used in the assignment examples.
-- The program expects valid integer input and minimal validation is performed.
-
-If you want, I can also:
-- Run the compile and sample test here and paste the exact program output.
-- Change SJF to a dynamic (ready-queue) non-preemptive variant instead of the global sort.
-- Improve the Gantt chart formatting to include timestamps and spacing.
-
-
